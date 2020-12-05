@@ -1,0 +1,23 @@
+
+
+To start django project
+django-admin startproject <project name> .
+
+to start an app in the django project
+python manage.py startapp profiles_api
+
+to run django dev server:
+python manage.py runserver 0.0.0.0:8000
+
+''''
+To allow other hosts on the network to access the vagrant vm:
+
+1)  Add the following to Vagrantfile
+
+  config.vm.network "forwarded_port", guest: 8000, host: 8000
+  # The following line bridges the wireless adapter to the public network for the vagrant box
+  config.vm.network "public_network", bridge: "wlp1s0"
+
+2) In the project folder, edit the settings.py file 'allowed hosts' list and add the ip of the vagrant box
+   ie ["10.0.0.120"]
+'''
