@@ -120,6 +120,8 @@ dmypy.json
 .pyre/
 
 ### Python Patch ###
+env/
+env*/
 .venv/
 
 ### Vagrant ###
